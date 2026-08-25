@@ -15,8 +15,47 @@
     <title>Sofia's Kitchen</title>
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <aside class="side-bar">
+      <header>
+        <ul class="nav-bar">
+          <li class="current">Home</li>
+          <li>Categories</li>
+          <li>Ingredients</li>
+        </ul>
+        <button class="ham-btn"></button>
+      </header>
+
+      <footer>
+      <div class="personal-info">
+        <p>© 2026 | Fernando Añaña | Uruguay</p>
+        <p>f.s.anana.g.work@gmail.com</p>
+      </div>
+      <div class="social-media">
+        <a href="linkedin"><img src="" alt="Linkedin logo" /></a>
+        <a href="github"><img src="" alt="GitHub logo" /></a>
+        <a href="email"><img src="" alt="Email logo" /></a>
+      </div>
+    </footer>
+    </aside>
+    <main>
+      <section class="hero-content">
+        <img class="hero-img" src="" alt="Food in a table" />
+        <h1>Sofia's Kitchen</h1>
+        <div class="main-btn">
+          <button class="categories">Categories</button>
+          <button class="ingredients">Ingredients</button>
+        </div>
+        <form action="/search" method="get">
+          <label for="site-search">Search:</label>
+          <input
+            type="search"
+            id="site-search"
+            name="Search bar"
+            placeholder="Type a recipe or ingredient"
+          />
+          <button type="submit">Search</button>
+        </form>
+      </section>
+    </main>
   </body>
 </html>
