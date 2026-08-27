@@ -17,48 +17,56 @@
   <body>
     <aside class="side-bar">
       <button class="ham-btn"></button>
-      <header>
-        <ul class="nav-bar">
-          <li class="current">Home</li>
-          <li>Categories</li>
-          <li>Ingredients</li>
-        </ul>
+      <header class="sb-content">
+        <nav class="navigation">
+          <ul>
+            <li class="current">Home</li>
+            <li>Categories</li>
+            <li>Ingredients</li>
+          </ul>
+        </nav>
       </header>
 
-      <footer>
-      <div class="personal-info">
-        <p>© 2026 | Fernando Añaña | Uruguay</p>
-        <p>f.s.anana.g.work@gmail.com</p>
-      </div>
-      <div class="social-media">
-        <a href=""><img src="images/linkedin.svg" alt="Linkedin logo" /></a>
-        <a href=""><img src="images/github.svg" alt="GitHub logo" /></a>
-        <a href=""><img src="images/email.svg" alt="Email logo" /></a>
-      </div>
-    </footer>
+      <footer class="sb-content">
+        <div class="personal-info">
+          <p>© 2026 | Fernando Añaña | Uruguay</p>
+          <p>f.s.anana.g.work@gmail.com</p>
+        </div>
+        <div class="social-media">
+          <a href=""><img src="images/linkedin.svg" alt="Linkedin logo" /></a>
+          <a href=""><img src="images/github.svg" alt="GitHub logo" /></a>
+          <a href=""><img src="images/email.svg" alt="Email logo" /></a>
+        </div>
+      </footer>
     </aside>
     <main>
-      <section class="hero-content">
-        <picture class="hero-picture">
-          <source srcset="images/hero-large.webp" media="(min-width:1000px)">
-          <source srcset="images/hero-medium.webp" media="(min-width:600px)">
-          <img class="hero-img" src="images/hero-small.webp" alt="Food in a table" />
-        </picture>
-        <h1>Sofia's Kitchen</h1>
-        <div class="main-btn">
-          <button class="categories">Categories</button>
-          <button class="ingredients">Ingredients</button>
-        </div>
-        <form action="/search" method="get">
-          <label for="site-search">Search:</label>
-          <input
-            type="search"
-            id="site-search"
-            name="Search bar"
-            placeholder="Type a recipe or ingredient"
+      <section class="hero">
+        <picture class="hero-img">
+          <source srcset="images/hero-large.webp" media="(min-width:1000px)" />
+          <source srcset="images/hero-medium.webp" media="(min-width:600px)" />
+          <img
+            class="hero-img"
+            src="images/hero-small.webp"
+            alt="Food in a table"
           />
-          <button type="submit">Search</button>
-        </form>
+        </picture>
+        <div class="main-content">
+          <h1>Sofia's Kitchen</h1>
+          <div class="main-btn">
+            <button class="categories">Categories</button>
+            <button class="ingredients">Ingredients</button>
+          </div>
+          <form action="/search" method="get">
+            <label for="site-search"></label>
+            <input
+              type="search"
+              id="site-search"
+              name="Search bar"
+              placeholder="Type a recipe or ingredient"
+            />
+            <button type="submit">Search</button>
+          </form>
+        </div>
       </section>
     </main>
   </body>

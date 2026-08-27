@@ -1,0 +1,68 @@
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  height: 100%;
+  background-color: aqua;
+  z-index: 1000;
+  .side-bar header {
+    justify-self: flex-start;
+  }
+
+  .side-bar footer {
+    justify-content: flex-end;
+  }
+}
+
+.ham-btn {
+  display: inline;
+}
+
+.side-bar.show {
+  display: block;
+}
+
+button {
+  background-color: white;
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  .hero-img {
+    z-index: 0;
+  }
+  .main-content {
+    position: absolute;
+    top: 11.3rem;
+    left: 8rem;
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+    }
+    .main-btn {
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        width: 125px;
+        height: 30px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        font-weight: bold;
+        background-color: lightgoldenrodyellow;
+      }
+    }
+    form {
+      margin: 1rem;
+      input {
+        width: 250px;
+        height: 30px;
+        border-radius: 100px;
+      }
+    }
+  }
+}
