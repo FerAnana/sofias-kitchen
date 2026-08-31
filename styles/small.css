@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #011638;
-  --primary-accent: #364156;
-  --secondary-color: #cdcdcd;
-  --secondary-accent: #dff8eb;
+  --primary-color: rgb(1, 22, 56);
+  --primary-accent: rgb(54, 65, 86);
+  --secondary-color: rgb(205, 205, 205);
+  --secondary-accent: rgb(223, 248, 235);
   --heading-font: "Montserrat", sans-serif;
   --body-font: "Open Sans", sans-serif;
 }
@@ -19,6 +19,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   font-family: var(--body-font);
+  @media (min-width: 500px) {
+    background-color: rgba(0, 0, 0, 0.676);
+  }
 }
 
 main {
@@ -64,6 +67,17 @@ main {
   }
   footer {
     color: var(--secondary-accent);
+    .personal-info {
+      margin: 1.5rem 0;
+      & p {
+        margin-bottom: 1rem;
+      }
+    }
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
   }
   .sb-content {
     margin: 1rem;
@@ -87,17 +101,38 @@ main {
   color: initial;
   transition:
     translate 0.5s ease-in-out,
-    color 0.5s ease-in-out;
+    color 0.5s ease-in-out,
+    background-color 0.5s ease-in-out,
+    border-radius 0.5s ease-in-out;
+
+  @media (min-width: 500px) {
+    color: var(--primary-color);
+    background-color: rgb(223 248 235 / 80%);
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .ham-btn.show {
   color: var(--secondary-accent);
   translate: 287px 0;
+  @media (min-width: 500px) {
+    background-color: transparent;
+    border-radius: 0;
+  }
+  @media (min-width: 1120px) {
+    position: fixed;
+    left: 0;
+  }
 }
 
 .ham-btn::before {
   content: "\2630";
   font-size: 2.5rem;
+  @media (min-width: 500px) {
+    font-size: 1.7rem;
+  }
 }
 
 button {
@@ -129,6 +164,14 @@ button {
       font-family: var(--heading-font);
       text-align: center;
       font-size: 2.5rem;
+
+      @media (min-width: 500px) {
+        color: var(--primary-color);
+        background-color: rgb(223 248 235 / 50%);
+        padding: 1rem;
+        border-radius: 25px;
+        font-size: 1.7rem;
+      }
     }
     .main-btn {
       display: flex;
@@ -154,6 +197,9 @@ button {
         border-radius: 100px;
         padding-left: 1rem;
       }
+    }
+    @media (min-width: 500px) {
+      margin-top: 15%;
     }
   }
 }
